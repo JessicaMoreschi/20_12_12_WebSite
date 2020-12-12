@@ -127,6 +127,7 @@ button{
   padding: 10px;
   margin-top: 5%;
   margin-right: 5%;
+  cursor: pointer;
 }
 
 .bt1 {
@@ -146,6 +147,10 @@ button{
   float: right;
 }
 
+#imgDestra2 {
+  padding-top: 3%;
+}
+
 .condizioni{
   display: block;
   float: left;
@@ -158,6 +163,29 @@ button{
 
 #condizioniEstr{
   width: 20%;
+}
+
+table {
+border-collapse:collapse;
+margin:15%;
+width: 70%;
+margin-top: 2%;
+margin-bottom: 2%;
+}
+td, th {
+border-top:0.5px solid #887b86;
+border-bottom:0.5px solid #887b86;
+padding:2.5px;
+}
+th {
+text-align: left;
+background-color: rgba(214,209,211,0.25);
+padding:5px;
+}
+
+.btnTab{
+  width: 40pt;
+  text-align: center;
 }
 
 .footer{

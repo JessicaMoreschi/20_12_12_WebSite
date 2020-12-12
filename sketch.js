@@ -1,12 +1,4 @@
-function preload(){
-  // put preload code here
-}
-
-function setup() {
-  createCanvas(windowWidth,windowHeight)
-  // put setup code here
-}
-
-function draw() {
-  // put drawing code here
-}
+document.getElementById('demosMenu').addEventListener('change', function(e){
+    var dropdown = document.getElementById('demosMenu');
+    window.location.href = dropdown.options[dropdown.selectedIndex].getAttribute('id') + '.html';
+});

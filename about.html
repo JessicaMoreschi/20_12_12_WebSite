@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+  <meta name="Resource-type" content="Document" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+  	/* Centered texts in each section
+  	* --------------------------------------- */
+  	.section{
+  		text-align:center;
+  	}
+  	/* Fixed header and footer.
+  	* --------------------------------------- */
+  	#header, #footer{
+  		position:fixed;
+  		height: 10%;
+  		display:block;
+  		width: 100%;
+  		background: #f9f9f8;
+  		z-index:9;
+  		padding: 0 0 0 0;
+  	}
+
+  	#header{
+  		top:0px;
+  	}
+  	#footer{
+  		bottom:0px;
+      height: 5%;
+      border-top-color: #887b86;
+      border-top-style: solid;
+      border-top-width: 0.5px;
+  	}
+
+  </style>
+  <link href="website.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="./dist/fullpage.css" />
+  <link rel="stylesheet" type="text/css" href="examples.css" />
+  <script src="p5.min.js"></script>
+  <script src="p5.sound.min.js"></script>
+  <script src="sketch.js"></script>
+  <script type="text/javascript" src="./dist/fullpage.js"></script>
+
+</head>
+
+<body>
+
+<div id="header">
+  <div class="header">
+    <a href="index.html#firstPage" class="header" id="logo"> </a>
+    <a href="about.html" class="voci" id="aboutus"> ABOUT</a>
+    <a href="kit.html" class="voci" id="strumentikit">KIT</a>
+    <div class="voci" id="headerTifo">
+      <div class="voci" id="iconStadioHeader"></div>
+      <p class="voci" id="voceTifo">TIFO</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id="fullpage">
+  <div class="section " id="section0">
+    <div class="intro">
+    <h1>PAGINA ABOUT</h1>
+    </div>
+  </div>
+
+
+<div id="footer">
+  <div class="footer">
+    <p>© 12Uomo – Il Vero tifo  |  Privacy Notice – Cookie Notice  – FAQ</p>
+  </div>
+</div>
+
+<script type="text/javascript">
+  var myFullpage = new fullpage('#fullpage', {
+    anchors: ['firstPage', 'secondPage', '3rdPage'],
+    sectionsColor: ['#F9F9F8', '#F9F9F8', '#f9f9f8'],
+    navigation: false,
+    navigationPosition: 'right',
+    css3: true
+  });
+</script>
+
+</body>

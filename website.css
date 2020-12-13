@@ -13,7 +13,9 @@ body {
   font-size: 10pt;
   font-weight: normal;
   font-style: normal;
+  text-decoration: none
 }
+
 
 .header {
   display: flex;
@@ -45,6 +47,8 @@ body {
   padding-left: 3%;
   padding-right: 3%;
   border: none;
+  text-decoration: none;
+  color: #887b86;
 }
 
 .voci:hover {

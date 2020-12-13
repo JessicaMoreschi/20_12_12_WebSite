@@ -51,7 +51,7 @@ body {
   color: #887b86;
 }
 
-a{
+a:link, a:visited{
   text-decoration: none;
   color: #887b86;
 }

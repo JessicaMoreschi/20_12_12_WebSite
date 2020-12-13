@@ -51,6 +51,11 @@ body {
   color: #887b86;
 }
 
+a{
+  text-decoration: none;
+  color: #887b86;
+}
+
 .voci:hover {
   border-bottom-color: #887b86;
   border-bottom-style: solid;

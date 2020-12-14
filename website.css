@@ -210,14 +210,6 @@ button:hover {
   width: 100%;
 }
 
-#videoSP{
-  position:absolute;
-  top:50%;
-  background-color:transparent;
-  border-top:solid;
-  border-bottom:solid;
-  border-width: 1.5px
-}
 
 #imgDestra2 {
   padding-top: 3%;

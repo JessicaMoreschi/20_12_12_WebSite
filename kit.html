@@ -19,25 +19,76 @@
   	}
   	/* Fixed header and footer.
   	* --------------------------------------- */
-  	#header, #footer{
-  		position:fixed;
-  		height: 10%;
-  		display:block;
-  		width: 100%;
-  		background: #f9f9f8;
-  		z-index:9;
-  		padding: 0 0 0 0;
-  	}
+    #header, #footer{
+      position:fixed;
+      height: 10%;
+      display:block;
+      width: 100%;
+      background: #f9f9f8;
+      z-index:9;
+      padding: 0 0 0 0;
+    }
 
-  	#header{
-  		top:0px;
-  	}
-  	#footer{
-  		bottom:0px;
+    #header{
+      top:0px;
+    }
+    #footer{
+      position:fixed;
+      bottom:0px;
       height: 5%;
       border-top-color: #887b86;
       border-top-style: solid;
       border-top-width: 0.5px;
+    }
+
+    #myVideo{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      top:0;
+      width: 100%;
+      height: 100%;
+      background-size: 100% 100%;
+      background-color: #f9f9f8; /* in case the video doesn't fit the whole page*/
+        background-image: /* our video */;
+        background-position: center center;
+        background-size: contain;
+        object-fit: cover; /*cover video background */
+        z-index:3;
+    }
+
+    /* Layer with position absolute in order to have it over the video
+    * --------------------------------------- */
+    #section0 .layer{
+      position: absolute;
+      z-index: 4;
+      width: 100%;
+      left: 0;
+      top: 80%;
+
+      /*
+      * Preventing flicker on some browsers
+      * See http://stackoverflow.com/a/36671466/1081396  or issue #183
+      */
+      -webkit-transform: translate3d(0,0,0);
+      -ms-transform: translate3d(0,0,0);
+      transform: translate3d(0,0,0);
+    }
+    /*solves problem with overflowing video in Mac with Chrome */
+    #section0{
+      overflow: hidden;
+    }
+
+    video::-webkit-media-controls {
+      display:none !important;
+    }
+
+    #section0 .layer:hover{
+      top: 81%;
+    }
+
+    .fp-controlArrow.fp-next{
+  		right: 100px;
   	}
 
   </style>
@@ -49,9 +100,9 @@
   <script src="sketch.js"></script>
   <script type="text/javascript" src="./dist/fullpage.js"></script>
 
-</head>
+  </head>
 
-<body>
+  <body>
 
   <div id="header">
     <div class="header">
@@ -69,28 +120,140 @@
 
 
 
-<div id="fullpage">
-  <div class="section " id="section0">
-    <div class="intro">
-    <h1>PAGINA KIT</h1>
-    </div>
+
+  <div id="fullpage">
+    <div class="section " id="section0">
+      <video id="myVideo" loop muted data-autoplay>
+        <source src="assets/video.mp4" type="video/mp4">
+      </video>
+      <a class="layer" href="#secondPage"><img id="arrow" src="./assets/freccia.svg" height="15px"></a>
+
   </div>
 
 
-<div id="footer">
+  <div class="section" id="section1">
+  <div class="slide" id="slide1">
+    <div class="intro">
+      <div class="testoSx">
+        <p id="titolo1"> <font color="#b7aeb5"> Ecco gli strumenti </font> <br> per tifare. </p>
+        <p id="testo1">Il kit 12Uomo© è completo di trombetta,
+          <br> sciarpa, maglietta e foglio da coreografia,
+          <br> per un'esperienza di tifo a 360°.</p>
+          <button class="bt1" >Compra ora</button>
+      </div>
+      <div class="imgDestra" id="imgDestra3">
+        <img src="./assets/imgKitVector.svg" >
+        <p class="condizioni" id="condizioniEstr"> <b>TROMBETTA <br></b>
+        <br><a href="#3rdPage/slide2"><button class="bt3">Scopri</button></a> </p>
+        <p class="condizioni"> <b>&nbsp&nbsp&nbsp&nbsp SCIARPA <br></b>
+        <br><a href="#3rdPage/slide3"><button class="bt3" style="margin-left: 25px">Scopri</button></a></p>
+        <p class="condizioni"> <b>MAGLIA &nbsp&nbsp&nbsp&nbsp <br></b>
+        <br><a href="#3rdPage/slide4"><button class="bt3" style="margin-left: -10px">Scopri</button></a></p>
+        <p class="condizioni" id="condizioniEstr"> <b>FOGLIO<br></b>
+        <br><a href="#3rdPage/slide5"><button class="bt3" style="margin-left: 5px">Scopri</button></a></p>
+      </div>
+      <a href="#3rdPage/slide1"><img id="arrow" src="./assets/freccia.svg" height="15px"></a>
+    </div>
+  </div>
+  </div>
+
+
+
+  <div class="section" id="section2">
+	    <div class="slide" id="slide1" data-anchor="slide1">
+        <div class="intro">
+          <div class="testoSx" style="margin-top: 10%">
+            <p id="titolo1"> <font color="#b7aeb5"> Kit </font> <br> Dodicesimo uomo. </p>
+            <p id="testo1">Il kit 12Uomo© è completo di trombetta,
+              <br> sciarpa, maglietta e foglio da coreografia,
+              <br> per un'esperienza di tifo a 360°.</p>
+          </div>
+          <div class="imgDestra">
+            <img id="imgKit" src="./assets/scatola.png" >
+          </div>
+        </div>
+		</div>
+
+	    <div class="slide" id="slide2" data-anchor="slide2">
+        <div class="intro">
+          <div class="testoSx" style="margin-top: 5.6%">
+            <p id="titolo1"> <font color="#b7aeb5"> Trombetta </font> <br> insonorizzata. </p>
+            <p id="testo1">Il kit 12Uomo© è completo di trombetta,
+              <br> sciarpa, maglietta e foglio da coreografia,
+              <br> per un'esperienza di tifo a 360°.</p>
+          </div>
+          <div class="imgDestra">
+            <img id="imgKit" src="./assets/trombetta.png" >
+          </div>
+        </div>
+		</div>
+
+		<div class="slide" id="slide3" data-anchor="slide3">
+      <div class="intro">
+        <div class="testoSx" style="margin-top: 5.6%">
+          <p id="titolo1"> <font color="#b7aeb5"> Sciarpa </font> <br> anonima. </p>
+          <p id="testo1">Il kit 12Uomo© è completo di trombetta,
+            <br> sciarpa, maglietta e foglio da coreografia,
+            <br> per un'esperienza di tifo a 360°.</p>
+        </div>
+        <div class="imgDestra">
+          <img id="imgKit" src="./assets/sciarpa.png" >
+        </div>
+      </div>
+
+  	</div>	<div class="slide" id="slide4" data-anchor="slide4">
+      <div class="intro">
+        <div class="testoSx" style="margin-top: 5.6%">
+          <p id="titolo1"> <font color="#b7aeb5"> Maglietta </font> <br> anonima. </p>
+          <p id="testo1">Il kit 12Uomo© è completo di trombetta,
+            <br> sciarpa, maglietta e foglio da coreografia,
+            <br> per un'esperienza di tifo a 360°.</p>
+        </div>
+        <div class="imgDestra">
+          <img id="imgKit" src="./assets/maglietta.png" >
+        </div>
+      </div>
+		</div>
+
+    <div class="slide" id="slide5" data-anchor="slide5">
+      <div class="intro">
+        <div class="testoSx" style="margin-top: 5.6%">
+          <p id="titolo1"> <font color="#b7aeb5"> Foglio </font> <br> coreografia. </p>
+          <p id="testo1">Il kit 12Uomo© è completo di trombetta,
+            <br> sciarpa, maglietta e foglio da coreografia,
+            <br> per un'esperienza di tifo a 360°.</p>
+        </div>
+        <div class="imgDestra">
+          <img id="imgKit" src="./assets/foglio.png" >
+        </div>
+      </div>
+		</div>
+	</div>
+
+
+
+
+
+
+  </div>
+
+
+  <div id="footer">
   <div class="footer">
     <p>© 12Uomo – Il Vero tifo  |  Privacy Notice – Cookie Notice  – FAQ</p>
   </div>
-</div>
+  </div>
 
-<script type="text/javascript">
+  <script type="text/javascript">
   var myFullpage = new fullpage('#fullpage', {
     anchors: ['firstPage', 'secondPage', '3rdPage'],
     sectionsColor: ['#F9F9F8', '#F9F9F8', '#f9f9f8'],
-    navigation: false,
+    navigation: true,
     navigationPosition: 'right',
+
+    slidesNavigation: true,
     css3: true
   });
-</script>
+  </script>
 
-</body>
+  </body>

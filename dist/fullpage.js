@@ -2120,6 +2120,7 @@
             //playing HTML5 media elements
             $('video, audio', panel).forEach(function(element){
                 if( element.hasAttribute('data-autoplay') && typeof element.play === 'function' ) {
+                    element.load(); //ricomincia il video ogni volta che torni sulla sezione
                     element.play();
                 }
             });

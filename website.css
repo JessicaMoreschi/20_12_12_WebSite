@@ -168,6 +168,15 @@ button {
   width: 20%;
 }
 
+.bt3 {
+  width: 70px;
+  margin-top: 11px;
+}
+
+#payOff{
+  margin-top: 10%
+}
+
 button:hover {
   background-color: #887b86;
   border-color: #887b86;
@@ -180,8 +189,20 @@ button:hover {
   float: right;
 }
 
+#video{
+  margin-right: 0%;
+  width: 100%;
+}
+
 #imgDestra2 {
   padding-top: 3%;
+}
+#imgDestra3 {
+  padding-top: 2%;
+}
+
+#imgKit{
+  width: 100%;
 }
 
 .condizioni {
@@ -190,8 +211,6 @@ button:hover {
   width: 30%;
   text-align: center;
   justify-content: space-between;
-  margin-bottom: 0px;
-  margin-top: 2.5%;
 }
 
 #condizioniEstr {
@@ -226,7 +245,7 @@ th {
 #arrow {
   position: absolute;
   top: 80%;
-  left: 50%;
+  left: 48.5%;
 }
 
 #arrow:hover {

@@ -74,22 +74,26 @@ html.fp-enabled,
   background-image: url("../assets/frecciaSx.svg");
   background-repeat: no-repeat;
   position: absolute;
-  left: 48%;
+  left: 15%;
   top: 85%;
   width: 15px;
   height: 28px;
   border: none;
+  display: none;
 }
 .fp-controlArrow.fp-next {
     background-image: url("../assets/frecciaDx.svg");
     background-repeat: no-repeat;
     position: absolute;
-    right: 48%;
+    right: 50%;
     top: 85%;
     width: 15px;
     height: 28px;
     border: none;
     z-index: 5;
+}
+.fp-controlArrow.fp-next:hover{
+    right: 49.5%;
 }
 .fp-scrollable {
     overflow: hidden;
@@ -132,7 +136,7 @@ html.fp-enabled,
     margin: 0 auto !important;
 }
 .fp-slidesNav.fp-bottom {
-    bottom: 16%;
+    bottom: 10%;
 }
 .fp-slidesNav.fp-top {
     top: 17px;

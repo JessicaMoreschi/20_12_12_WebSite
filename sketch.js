@@ -5,5 +5,10 @@ document.getElementById('demosMenu').addEventListener('change', function(e){
 
 function buy(){
   document.getElementById('testoBuy').style.display='block';
-  document.getElementById("testoBuyBtn").innerHTML = "Comprato";
+  var btn = document.getElementById("testoBuyBtn");
+  btn.innerHTML = "Comprato";
+  btn.style.backgroundColor='#f9f9f8';
+  btn.style.borderColor='#887b86';
+  btn.style.color='#887b86';
+
 }

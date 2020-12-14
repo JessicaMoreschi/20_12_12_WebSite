@@ -259,9 +259,16 @@ th {
   text-align: center;
 }
 
+.btnTab:hover {
+  background-color: #887b86;
+  border-color: #887b86;
+  color: #f9f9f8;
+}
+
 .btnTab:disabled{
   opacity: 0.25
 }
+
 .btnTab:disabled:hover{
   background-color: #f9f9f8;
   border-color: #887b86;

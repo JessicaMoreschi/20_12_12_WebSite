@@ -167,10 +167,6 @@ button {
   cursor: pointer;
 }
 
-button:disabled{
-  opacity: 0.25
-}
-
 .bt1 {
   background-color: #887b86;
   border-color: #887b86;
@@ -261,6 +257,16 @@ th {
 .btnTab {
   width: 40pt;
   text-align: center;
+}
+
+.btnTab:disabled{
+  opacity: 0.25
+}
+.btnTab:disabled:hover{
+  background-color: #f9f9f8;
+  border-color: #887b86;
+  color: #887b86;
+  cursor: auto;
 }
 
 #arrow {

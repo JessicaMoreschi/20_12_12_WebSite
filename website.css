@@ -167,6 +167,10 @@ button {
   cursor: pointer;
 }
 
+button:disabled{
+  opacity: 0.25
+}
+
 .bt1 {
   background-color: #887b86;
   border-color: #887b86;

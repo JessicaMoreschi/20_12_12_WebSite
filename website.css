@@ -134,14 +134,19 @@ a:link, a:visited, .voci a:link, .voci a:visited{
 
 .testoSx {
   text-align: left;
-  margin-left: 15%;
+  margin: auto 0 auto 15%;
   width: 25%;
   float: left;
 }
 
-#titolo1 {
+
+#titolo1, #titolo1Ogg {
   font-size: 20pt;
   font-weight: bold;
+}
+
+#titolo1Ogg{
+margin-top: 70%
 }
 
 #testoBuy {
